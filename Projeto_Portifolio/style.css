@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;                                           /* aplicando o reset*/
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;  /* usando as fontes*/
+    height: 180vh; /*aumentando o scroll */
+}
+
+nav {
+   background-color: #121212;
+   height: 90px;
+   width: 100%;
+   display: flex;
+}
+
+.Home {
+    order: 1;
+    
+}
+
+.Sobre {
+    order: 2;
+}
+
+.Projetos {
+    order: 3;
+}

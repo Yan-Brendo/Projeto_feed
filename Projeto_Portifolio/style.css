@@ -6,8 +6,14 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;  /* usando as fontes*/
+    font-family: 'Roboto', sans-serif;                  /* usando as fontes*/
+    height: 100%;
 }
+
+html {                          
+    height: 100%;
+}
+
 
 .nav {
    background-color: #121212;
@@ -15,6 +21,8 @@ body {
    width: 100%;                             /*estilizando o nav*/
    display: flex;                           /*ativando o flex box*/
    justify-content: flex-end;               /*colocando os itens pro final*/
+   position: fixed;                         /*fixando o home-sobre-projetos*/
+   z-index: 1000;                           /*informando que a barra "sobre" tem peso maior no empilhamento de itens*/
 }
 
 .list-1 {
@@ -35,8 +43,108 @@ body {
 }
         /*INICIO MAIN*/
 
+.main {
+    width: 100%;                  /*fazendo o elemento .main ocupar toda a largura disponivel*/
+    background-color: #121212;
+    height:calc(100% - 80px);     /*Define a altura do elemento como 100% com uma redução de 80 pixels do header*/
+    background-image: url("./images/wallpaper.jpg");  /*colocando img de fundo atraves da url*/
+    background-repeat: no-repeat;   /*não permite que a img de fundo se repita varias vezes*/
+    background-size: cover;         /*Garante que a imagem de fundo cobrirá completamente o elemento .main, mesmo que isso signifique cortar parte da imagem. */
+    display: flex;                  /*ativando o display flex*/
+    align-items: center;            /*alinhando no centro na vertical*/
+    padding-left: 100px;            /*espaçamento interno na esquerda*/
+
+}
+
+.main h1 {
+    color: #121212;
+    font-size: 54px;
+    
+}
+
+.main p {
+    color: #FFFACD;
+    font-size: 24px;            /*tamanho da font*/
+    font-style: italic;         /*estilo da font*/           
+    margin-top: 10px;           /*afastando o <p> do <h1>*/
+    margin-bottom: 35px;         /*margem em baixo do <p>*/
+}
+
+.botao {
+    background-color: #FFFACD;
+    cursor: pointer;                /*indica ao passar ou cursor, que é um botão*/
+    border: 0;                       /*tirando as bordas*/
+    padding: 8px;                    /*espaçamento interno*/
+    border-radius: 14px;             /*arredondando a borda*/
+    font-size: 14px;                 /*aumentando a font*/
+    font-weight: bold;              /*deixando negrito*/
+    transition: 0.9s;               /*complemento do transform, a scale ira aumentar em 0.9s*/
+}
+
+.botao:hover {                      /*hover: estado do elemento ao passar o mouse*/
+    transform: scale(1.1);          /*scale: aumenta a proporção do botão*/
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /*colocando uma sombra no botão*/
+}
+
+.main a {
+    text-decoration: none;          /*tirando o sublinhado do texto*/
+}
+
+        /*FIM MAIN*/
+
+.sobre {
+    width: 100%;
+    background-color:#e4e3db;     /*cor de fundo*/
+    padding-left: 10%;              /*espaçamento interno a esquerda*/
+    padding-right: 10%;             /*espaçamento interno a direita*/
+    padding-top: 80px;              /*espaçamento interno em cima*/
+    padding-bottom: 80px;           /*espaçamento interno em baixo*/
+
+    display: flex;                  /*ativando o display-flex para alinhar a img e o texto*/
+    align-items: center;            /*alinhando o texto e img em linha*/
+    justify-content: space-between; /*colocando um espaçamento entre eles*/
+
+}
+
+.sobre div {
+    max-width: 50%;                 /*a div nunca será maior que 50%*/
+    padding-right: 40px;            /*espaçamento interno a direita para o texto n grudar na img*/
+}
+
+.sobre img {
+    border-radius: 8px;            /*arredondando as bordas da img*/
+    max-width: 500px;               /*diminuindo o tamnho da img*/
+    margin-right: 8%;               /*ajustando o espaçamento da img para coloca-la mais prox do txt*/
+
+}
+
+.sobre div h2 {
+    font-size: 32px;            
+    margin-bottom: 15px;            /*afastando o sobre do texto*/
+}
+
+.sobre div p {
+    margin-bottom: 15px;            /*afastando o <p>*/
+}
 
 
+@keyframes float {                  /* Definindo a animação 'float' para a imagem */
+    
+    0%, 100% {                      /* Definindo o estado inicial e final (0% e 100%) da animação */
+        transform: translateY(0);  /* Mantém a posição original da imagem, sem movimento vertical */
+    }
+   
+    50% {                           /* Definindo o estado intermediário (50%) da animação */
+        transform: translateY(20px); /* Move a imagem para baixo em 20 pixels, criando o efeito de flutuação vertical (ajuste conforme necessário) */
+    }
+}
+
+
+.animation_img {                    /* Aplicando a animação 'float' à classe 'animation_img' */
+    height: auto;                   /* Ajusta a altura automaticamente para manter a proporção original da imagem */
+    animation: float 2.9s ease-in-out infinite; /* Aplica a animação 'float' com uma duração de 10 segundos, transição suave de entrada e saída, e repetição infinita */
+    z-index: 900;                    /*informando que a img tem peso menor no empilhamento de itens*/
+}
 
 
 

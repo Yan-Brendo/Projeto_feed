@@ -10,10 +10,15 @@ body {
     height: 100%;
 }
 
+html {                                          /*entrando dentro do seletor html*/
+    scroll-behavior: smooth;                       /*deizando a rolagem suave*/
+}
+
 html {                          
     height: 100%;
 }
 
+        /*INICIO HEADER*/
 
 .nav {
    background-color: #121212;
@@ -22,7 +27,8 @@ html {
    display: flex;                           /*ativando o flex box*/
    justify-content: flex-end;               /*colocando os itens pro final*/
    position: fixed;                         /*fixando o home-sobre-projetos*/
-   z-index: 1000;                           /*informando que a barra "sobre" tem peso maior no empilhamento de itens*/
+   z-index: 9;                           /*informando que a barra "sobre" tem peso maior no empilhamento de itens*/
+   top: 0;
 }
 
 .list-1 {
@@ -41,23 +47,26 @@ html {
 .list-1 a:hover {                   /*acessando os nomes - acessando a ancora - hover ao passar o mouse*/
     color: #ffd700;
 }
+
+        /*FIM HEADER*/
+
         /*INICIO MAIN*/
 
 .main {
     width: 100%;                  /*fazendo o elemento .main ocupar toda a largura disponivel*/
     background-color: #121212;
     height:calc(100% - 80px);     /*Define a altura do elemento como 100% com uma redução de 80 pixels do header*/
-    background-image: url("./images/wallpaper.jpg");  /*colocando img de fundo atraves da url*/
-    background-repeat: no-repeat;   /*não permite que a img de fundo se repita varias vezes*/
-    background-size: cover;         /*Garante que a imagem de fundo cobrirá completamente o elemento .main, mesmo que isso signifique cortar parte da imagem. */
+    background-image: url("images/programador.png");  /*colocando img de fundo atraves da url*/
+    
+   
     display: flex;                  /*ativando o display flex*/
     align-items: center;            /*alinhando no centro na vertical*/
-    padding-left: 100px;            /*espaçamento interno na esquerda*/
+    padding-left: 10px;            /*espaçamento interno na esquerda*/
 
 }
 
 .main h1 {
-    color: #121212;
+    color: #FFFFFF;
     font-size: 54px;
     
 }
@@ -71,7 +80,7 @@ html {
 }
 
 .botao {
-    background-color: #FFFACD;
+    background-color: #FFFFFF;
     cursor: pointer;                /*indica ao passar ou cursor, que é um botão*/
     border: 0;                       /*tirando as bordas*/
     padding: 8px;                    /*espaçamento interno*/
@@ -109,13 +118,18 @@ html {
 .sobre div {
     max-width: 50%;                 /*a div nunca será maior que 50%*/
     padding-right: 40px;            /*espaçamento interno a direita para o texto n grudar na img*/
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .sobre img {
     border-radius: 8px;            /*arredondando as bordas da img*/
-    max-width: 500px;               /*diminuindo o tamnho da img*/
-    margin-right: 8%;               /*ajustando o espaçamento da img para coloca-la mais prox do txt*/
+    max-width: 400px;               /*diminuindo o tamnho da img*/
+    margin-right: 8px;               /*ajustando o espaçamento da img para coloca-la mais prox do txt*/
+}
 
+.animation_img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .sobre div h2 {
@@ -127,24 +141,171 @@ html {
     margin-bottom: 15px;            /*afastando o <p>*/
 }
 
+        /*INICIO PROJECTS*/
 
-@keyframes float {                  /* Definindo a animação 'float' para a imagem */
-    
-    0%, 100% {                      /* Definindo o estado inicial e final (0% e 100%) da animação */
-        transform: translateY(0);  /* Mantém a posição original da imagem, sem movimento vertical */
+.project{
+    background-color:#e4e3db;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.project h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.project p {
+    font-style: italic;
+    padding-bottom: 30px;
+}
+
+.project-list{
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project img {
+    width:22%;
+    border-radius: 22px;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /*aplicando uma transção de muda a opacidade "ease-in-out",  é a função de temporização, que controla a aceleração e desaceleração da transição. */
+    /*transform é uma propriedade que pode ser usada para aplicar transformações, como rotação, escala, translação, etc.*/
+}
+
+.project img:hover {
+    opacity: 1;
+    transform: scale(1.1);     /*aumenta o tamanho da imagem para 1.1 vezes o tamanho original. Isso cria um efeito de "zoom" sutil quando o mouse está sobre a imagem.*/
+}
+
+.project_list_2 {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.action {
+    margin-top: 25px;
+    border-radius: 3px;
+    background-color: #181818;
+    font-size: 15px;
+    border: 0;
+    padding: 12px 24px;
+    color: #FFFFFF;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.action:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+    /*INICIO RODAPE*/
+
+footer {
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 65px;
+    color: #ddd;
+}
+
+footer a {
+    color: #ddd;
+    padding-right: 12px;
+    text-decoration: none;
+}
+
+    /*FIM RODAPE*/
+
+
+    /*RESPONSIVIDADE*/
+
+@media (max-width: 995px){
+    .main h1 {
+        font-size: 40px;
     }
-   
-    50% {                           /* Definindo o estado intermediário (50%) da animação */
-        transform: translateY(20px); /* Move a imagem para baixo em 20 pixels, criando o efeito de flutuação vertical (ajuste conforme necessário) */
+
+    .main p {
+        font-size: 18px;
+    }
+
+    .main {
+        background-size: cover;
+    }
+
+        /*FIM MAIN */
+
+        /*INICIO SOBRE*/
+
+    .sobre {
+        flex-direction: column;
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    .sobre div {
+        max-width: 80%;
+    }
+
+    .sobre div h2 {
+        font-size: 45px;
+    }
+
+    .sobre img {
+        width: 80%;
+        margin-top: 30px;
+        margin-left: 16%;
+    }
+
+    /*FIM SOBRE*/
+
+    /*INICIO PROJETOS*/
+
+    .project img {
+        width: 30%;
+    }
+
+    /*FIM PROJETOS*/
+
+    /*INICIO RODAPE*/
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer h3 {
+        padding-bottom: 10px;
+    }
+
+    footer p {
+        margin: 0;
     }
 }
 
 
-.animation_img {                    /* Aplicando a animação 'float' à classe 'animation_img' */
-    height: auto;                   /* Ajusta a altura automaticamente para manter a proporção original da imagem */
-    animation: float 2.9s ease-in-out infinite; /* Aplica a animação 'float' com uma duração de 10 segundos, transição suave de entrada e saída, e repetição infinita */
-    z-index: 900;                    /*informando que a img tem peso menor no empilhamento de itens*/
-}
+
+
+
+
+
+
 
 
 

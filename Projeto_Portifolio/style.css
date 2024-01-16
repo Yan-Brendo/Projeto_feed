@@ -59,9 +59,14 @@ html {
     background-image: url("images/programador.png");  /*colocando img de fundo atraves da url*/
     display: flex;                  /*ativando o display flex*/
     align-items: center;            /*alinhando no centro na vertical*/
-    padding-left: 400px;            /*espaçamento interno na esquerda*/
     padding-bottom: 150px;          /*espaçamento interno em baixo*/
     
+}
+
+.hero {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .main h1 {
@@ -213,69 +218,67 @@ footer a {
 
     /*RESPONSIVIDADE*/
 
-@media (max-width: 995px){
-    .main h1 {
-        font-size: 40px;
+    @media (max-width: 1331px) {
+        .main h1 {
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main a {
+           display: flex;
+           justify-content: center;
+        }
+
+        .animation_img {
+            display: flex;
+            flex-direction: column;
+            display: none;
+        }
+
+        .sobre {
+            flex-direction: column;
+        }
+
+        .sobre div p {
+            font-size: 20px;  
+        }
+
+        .project h2 {
+            font-size: 25px;
+        }
+
+        .project p {
+            font-size: 15px;
+        }
+
+        .project-list {
+            width: 160%;
+        }
+
+        .project_list_2 {
+            width: 160%;
+        }
     }
 
-    .main p {
-        font-size: 18px;
+    @media (max-width: 383px) {
+        .project h2 {
+            white-space: nowrap;
+        }
+
+        .project p {
+            white-space: nowrap;
+        }
+
+        .project-list {
+            width: 150%;
+        }
+
+        .project_list_2 {
+            width: 150%;
+        }
     }
 
-    .main {
-        background-size: cover;
-    }
-
-        /*FIM MAIN */
-
-        /*INICIO SOBRE*/
-
-    .sobre {
-        flex-direction: column;
-        padding-top: 80px;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 0;
-    }
-
-    .sobre div {
-        max-width: 80%;
-    }
-
-    .sobre div h2 {
-        font-size: 45px;
-    }
-
-    .sobre img {
-        width: 80%;
-        margin-top: 30px;
-        margin-left: 16%;
-    }
-
-    /*FIM SOBRE*/
-
-    /*INICIO PROJETOS*/
-
-    .project img {
-        width: 30%;
-    }
-
-    /*FIM PROJETOS*/
-
-    /*INICIO RODAPE*/
-
-    footer {
-        flex-direction: column;
-    }
-
-    footer h3 {
-        padding-bottom: 10px;
-    }
-
-    footer p {
-        margin: 0;
-    }
-}
 
 
 

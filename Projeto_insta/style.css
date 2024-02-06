@@ -54,14 +54,10 @@ body {
 }
 
 .login-panel {
-    border: 0.5px solid #dfdddd;
-    border-radius: 5px;
-    width: 400px;
-    height: 380px;
-    text-align: center;                       /*para alinhar os textos*/
-    position: relative;                       /*garante que o deslocament é feito em relação a posição normal do elemento*/
-    top: -105px;                              /*subindo a div para cima*/
-    padding-top: 40px;
+    background-color: #FFF;
+    border: 1px solid rgb(236, 234, 234);
+    text-align: center;
+    
 }
 
 form {
@@ -180,14 +176,13 @@ span {
 }
 
 .not-acount {
-    text-align: center;
-    background-color: #ffffff;
+    background-color: #FFF;
     height: 60px;
-    width: 400px;
-    border: 0.5px solid #dfdddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: -96px;
+    border: 1px solid rgb(236, 234, 234);
+    margin: 10px auto 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cadastre-se a {
@@ -254,6 +249,8 @@ footer h3 a:last-child {                    /*estilizando a ultima tag <a>*/
     padding-right: 10px;
 }
 
+        /*PAGINA SIGNUP*/
+
 #container-signup {
     margin: 0 auto;
     min-height: 100%;
@@ -261,6 +258,92 @@ footer h3 a:last-child {                    /*estilizando a ultima tag <a>*/
     display: flex;
     align-items: center;
 }
+.login-panel2 {
+    border: 0.5px solid #dfdddd;
+    border-radius: 5px;
+    width: 400px;
+    height: 600px;
+    text-align: center;                       /*para alinhar os textos*/
+    position: relative;                       /*garante que o deslocament é feito em relação a posição normal do elemento*/
+    top: -105px;                              /*subindo a div para cima*/
+    padding-top: 40px;
+}
+
+.message {
+   margin-left: 70px;
+   margin-right: 70px;
+   margin-bottom: 20px;
+}
+.message span {
+    font-size: 15px;
+}
+
+.cta-button {
+   padding: 7px;
+   width: 75%;
+   height: 35px;
+   border: 1px;
+   border-radius: 5px;
+   background-color: #3c96ed;
+   color: #ffffff;
+   font-weight: bold;
+}
+
+.divisor-container {
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   margin: 10px 0;
+}
+
+.line {
+  height: 1px;
+  width: 35%;
+  background-color:rgb(220, 212, 212);  
+}
+
+.divisor-tag {
+    margin: 0 2.5%;
+    font-weight: bold;
+    color: rgb(143, 142, 142);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+        /*FIM PAGINA SIGNUP*/
+
+        /*RESPONSIVIDADE*/
+
+@media (max-width: 955px) {
+    .left {
+        display: none;
+    }
+
+    #container {
+        width: 70%;
+    }
+
+    .right {
+        padding: 0;
+    }
+
+    .login-panel {
+       width:400px;
+       margin: auto;
+    }
+
+    .not-acount {
+        width: 300px;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+   
+}
+
+
 
 
 

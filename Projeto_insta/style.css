@@ -25,7 +25,7 @@ body {
 #container {
     margin: 0 auto;
     min-height: 100%;
-    width: 800px;
+    max-width: 800px;
     display: flex;
     align-items: center;
 }
@@ -45,7 +45,7 @@ body {
 }
 
 .right {
-    padding-left: 20px;
+    padding-left: 20px; 
     padding-bottom: 40px;
 }
 
@@ -57,7 +57,6 @@ body {
     background-color: #FFF;
     border: 1px solid rgb(236, 234, 234);
     text-align: center;
-    
 }
 
 form {
@@ -195,7 +194,6 @@ span {
     margin-top: 20px;
 }
 
-
 .obtenha-app span {
     color: rgb(34, 34, 34);
     font-size: 13px;
@@ -221,13 +219,14 @@ footer {
     justify-content: center;
     padding-top: -50px;
     width: auto;
-    margin-top: -120px;
+    margin-top: -90px;
     font-size: 9.5px;
 }
 
 footer h3 a:not(:last-child) {              /*dando um espaçamento entre todas as ancoras execeto a ultima*/
     margin-right: 10px;
     color: rgb(108, 104, 104);
+    
 }
 
 
@@ -253,19 +252,20 @@ footer h3 a:last-child {                    /*estilizando a ultima tag <a>*/
 
 #container-signup {
     margin: 0 auto;
+    padding-top: 40px;
     min-height: 100%;
     max-width: 400px;
     display: flex;
     align-items: center;
+    
 }
 .login-panel2 {
     border: 0.5px solid #dfdddd;
     border-radius: 5px;
-    width: 400px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     text-align: center;                       /*para alinhar os textos*/
-    position: relative;                       /*garante que o deslocament é feito em relação a posição normal do elemento*/
-    top: -105px;                              /*subindo a div para cima*/
+    position: relative;                       /*garante que o deslocament é feito em relação a posição normal do elemento*/                            /*subindo a div para cima*/
     padding-top: 40px;
 }
 
@@ -310,6 +310,8 @@ footer h3 a:last-child {                    /*estilizando a ultima tag <a>*/
     font-size: 12px;
 }
 
+
+
         /*FIM PAGINA SIGNUP*/
 
         /*RESPONSIVIDADE*/
@@ -339,7 +341,6 @@ footer h3 a:last-child {                    /*estilizando a ultima tag <a>*/
     footer{
         text-align: center;
     }
-
    
 }
 

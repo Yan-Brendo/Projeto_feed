@@ -105,7 +105,6 @@ html {
     padding-right: 10%;             /*espaçamento interno a direita*/
     padding-top: 80px;              /*espaçamento interno em cima*/
     padding-bottom: 80px;           /*espaçamento interno em baixo*/
-
     display: flex;                  /*ativando o display-flex para alinhar a img e o texto*/
     align-items: center;            /*alinhando o texto e img em linha*/
     justify-content: space-between; /*colocando um espaçamento entre eles*/

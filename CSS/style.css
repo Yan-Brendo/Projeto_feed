@@ -1,0 +1,14 @@
+.primeiro-h1{
+    color: rgb(52, 126, 190);
+    font-style: italic;
+}
+
+.segundo-h1{
+    color: aquamarine;
+    font-style: oblique;
+}
+
+#titulo{
+    color: rgb(221, 134, 21);
+    font-style: italic;
+}
